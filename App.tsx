@@ -82,8 +82,8 @@ function App() {
               </div>
            </motion.div>
 
-           {/* Grid - Forced 2 columns on mobile */}
-           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
+           {/* Grid - Enhanced for mobile impact */}
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
               {isChangingCategory ? (
                 // Skeleton Loader
                 Array.from({ length: 8 }).map((_, i) => (

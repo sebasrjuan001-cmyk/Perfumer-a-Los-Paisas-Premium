@@ -14,6 +14,13 @@ export interface Product {
   price: number;
   imageUrl: string; // Will hold the filename as requested
   badge?: string; // e.g. "TOP VENTAS", "NUEVO"
+  performance?: {
+    versatility: number;   // 1-5 (Signature/Daily)
+    professional: number;  // 1-5 (Business/Formal)
+    nocturnal: number;     // 1-5 (Night/Seduction)
+    longevity: number;     // 1-5 (Duration)
+    sillage: number;       // 1-5 (Projection)
+  }
 }
 
 export interface FilterState {

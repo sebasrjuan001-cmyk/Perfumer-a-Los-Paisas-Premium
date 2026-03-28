@@ -34,7 +34,14 @@ export const PRODUCTS: Product[] = [
     badge: 'NUEVO',
     imageUrl: `150_Mujer_Giardini_di_Toscana_Bianco_Latte.webp`,
     description: 'El abrazo viral de caramelo, miel y vainilla cremosa.',
-    dna: ['Vainilla', 'Dulce', 'Gourmand' as NoteType]
+    dna: ['Vainilla', 'Dulce', 'Gourmand' as NoteType],
+    performance: {
+      versatility: 3,
+      professional: 2,
+      nocturnal: 5,
+      longevity: 5,
+      sillage: 5
+    }
   },
   {
     id: 'selena-gomez-selena',
@@ -67,7 +74,14 @@ export const PRODUCTS: Product[] = [
     price: 45.00,
     imageUrl: `153_Mujer_Bond_No._9_Bleecker_Street.webp`,
     description: 'La esencia de NY. Hojas de violeta y arándanos.',
-    dna: ['Verde', 'Amaderado', 'Frutal']
+    dna: ['Verde', 'Amaderado', 'Frutal'],
+    performance: {
+      versatility: 5,
+      professional: 4,
+      nocturnal: 3,
+      longevity: 4,
+      sillage: 3
+    }
   },
   {
     id: 'shakira-s-by-shakira',
@@ -89,7 +103,14 @@ export const PRODUCTS: Product[] = [
     price: 45.00,
     imageUrl: `155_Mujer_Prada_Candy.webp`,
     description: 'Exceso de caramelo y benjuí sofisticado.',
-    dna: ['Dulce', 'Vainilla', 'Oriental']
+    dna: ['Dulce', 'Vainilla', 'Oriental'],
+    performance: {
+      versatility: 3,
+      professional: 2,
+      nocturnal: 5,
+      longevity: 4,
+      sillage: 4
+    }
   },
   {
     id: 'kim-kardashian-kim',
