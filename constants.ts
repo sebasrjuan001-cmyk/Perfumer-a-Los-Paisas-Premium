@@ -50,6 +50,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Dama',
     price: 45.00,
+    badge: 'STOCK INMEDIATO',
     imageUrl: `151_Mujer_Selena_Gomez_Selena_Gomez.webp`,
     description: 'Frambuesa vibrante y chocolate oscuro.',
     dna: ['Frutal', 'Dulce', 'Floral']
@@ -141,6 +142,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Dama',
     price: 45.00,
+    badge: 'RECIÉN LLEGADO',
     imageUrl: `158_Mujer_Guy_Laroche_Drakkar_Intense.webp`,
     description: 'Intensidad aromática y carácter fuerte.',
     dna: ['Oriental', 'Amaderado', 'Especiada']

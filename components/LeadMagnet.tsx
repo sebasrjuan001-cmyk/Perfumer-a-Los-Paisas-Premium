@@ -2,19 +2,23 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FileText, X, MessageSquare, TrendingUp } from 'lucide-react';
 
-const LeadMagnet: React.FC = () => {
+interface LeadMagnetProps {
+  isHidden?: boolean;
+}
+
+const LeadMagnet: React.FC<LeadMagnetProps> = ({ isHidden }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {/* Floating Trigger - Visible on Mobile too */}
-      <motion.div 
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 3, duration: 0.8 }}
-        className="fixed bottom-24 left-6 z-40"
-      >
-        {!isOpen && (
+      {/* Floating Trigger — removed from DOM immediately when a product modal is open */}
+      {!isHidden && !isOpen && (
+        <motion.div 
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 3, duration: 0.8 }}
+          className="fixed bottom-24 left-6 z-40"
+        >
           <button 
             onClick={() => setIsOpen(true)}
             className="group flex items-center gap-3 bg-[#121212] border border-[#BF953F]/50 p-2 pr-5 rounded-full hover:border-[#BF953F] transition-all shadow-[0_10px_30px_rgba(0,0,0,0.5)] active:scale-95"
@@ -27,8 +31,8 @@ const LeadMagnet: React.FC = () => {
                <span className="text-[8px] text-[#BF953F] uppercase tracking-widest font-bold">B2B Mayorista</span>
             </div>
           </button>
-        )}
-      </motion.div>
+        </motion.div>
+      )}
 
       {/* Overlay Modal */}
       <AnimatePresence>
@@ -84,10 +88,10 @@ const LeadMagnet: React.FC = () => {
                  </p>
 
                  <a 
-                    href="https://wa.me/593981046714?text=Hola,%20quisiera%20negociar%20un%20pedido%20de%20perfumes%20al%20por%20mayor.%20Vi%20sus%20precios%20en%20la%20web."
+                    href="https://wa.me/593988755347?text=Hola,%20quisiera%20negociar%20un%20pedido%20de%20perfumes%20al%20por%20mayor.%20Vi%20sus%20precios%20en%20la%20web."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full bg-gradient-to-r from-[#BF953F] to-[#FCF6BA] text-black py-5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all shadow-[0_10px_20px_rgba(191,149,63,0.2)] hover:shadow-[0_15px_30px_rgba(191,149,63,0.4)] flex items-center justify-center gap-3 active:scale-[0.98]"
+                    className="w-full bg-gradient-to-r from-[#BF953F] to-[#FCF6BA] text-black py-5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all shadow-[0_10px_30px_rgba(191,149,63,0.2)] hover:shadow-[0_15px_30px_rgba(191,149,63,0.4)] flex items-center justify-center gap-3 active:scale-[0.98]"
                  >
                     <MessageSquare size={16} />
                     Iniciar Negociación

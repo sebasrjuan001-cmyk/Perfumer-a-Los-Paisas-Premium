@@ -282,12 +282,24 @@ const Navbar: React.FC<NavbarProps> = ({ onFilterChange }) => {
                   ))}
                 </div>
                 
-                <div className="space-y-2">
-                  <h3 className="text-[#BF953F] font-sans text-[10px] uppercase tracking-widest pl-2 mb-2">Marcas Principales</h3>
-                  <div className="grid grid-cols-2 gap-1 px-2">
-                    {brandOptions.slice(0, 8).map(brand => (
-                      <button key={brand} onClick={() => handleCategoryClick(brand)} className="text-xs text-white/60 hover:text-white text-left p-2 hover:bg-white/5 rounded">
-                        {brand}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between px-2">
+                    <h3 className="text-[#BF953F] font-sans text-[10px] uppercase tracking-[0.2em] font-bold">Directorio de Marcas</h3>
+                    <span className="text-[9px] text-white/20 uppercase tracking-widest font-bold">16 Referencias</span>
+                  </div>
+                  <div className="flex flex-col gap-1 px-2">
+                    {brandOptions.map(brand => (
+                      <button 
+                        key={brand} 
+                        onClick={() => handleCategoryClick(brand)} 
+                        className={`group flex items-center justify-between px-4 py-3 rounded-xl transition-all border ${
+                          activeCategory === brand 
+                          ? 'bg-[#BF953F]/10 border-[#BF953F]/30 text-[#BF953F]' 
+                          : 'bg-white/5 border-white/5 text-white/60 hover:border-white/20 hover:text-white'
+                        }`}
+                      >
+                        <span className="text-sm font-sans tracking-wide">{brand}</span>
+                        <div className={`w-1.5 h-1.5 rounded-full transition-transform ${activeCategory === brand ? 'bg-[#BF953F] scale-125' : 'bg-white/10 group-hover:bg-white/30'}`}></div>
                       </button>
                     ))}
                   </div>
@@ -302,7 +314,7 @@ const Navbar: React.FC<NavbarProps> = ({ onFilterChange }) => {
                   </div>
                   <div className="flex items-center gap-4 text-white/60">
                     <Phone className="w-4 h-4 text-[#BF953F]" />
-                    <span className="font-sans text-sm">+593 98 104 6714</span>
+                    <span className="font-sans text-sm">+593 98 875 5347</span>
                   </div>
                    <div className="flex items-center gap-4 text-white/60">
                     <Instagram className="w-4 h-4 text-[#BF953F]" />
