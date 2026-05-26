@@ -436,7 +436,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `194_Hombre_Animale_Animale_For_Men.webp`,
+    imageUrl: `184_Hombre_Avon_Musk.webp`,
     description: 'Clásico, limpio y masculino. Cuero y lavanda.',
     dna: ['Aromatica', 'Cuero', 'Amaderado']
   },
@@ -525,7 +525,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `10_Hombre_Paco_Rabanne_Black_XS_L’Excès.webp`,
+    imageUrl: `192_Hombre_Burberry_Burberry_Clásico.webp`,
     description: 'El gentleman inglés relajado.',
     dna: ['Amaderado', 'Aromatica', 'Fresco' as NoteType]
   },
@@ -547,7 +547,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `oud for glory men.webp`,
+    imageUrl: `194_Hombre_Animale_Animale_For_Men.webp`,
     description: 'Audacia magnética. Miel, piña y tabaco.',
     dna: ['Oriental', 'Aromatica', 'Especiada']
   },
@@ -1301,7 +1301,7 @@ export const PRODUCTS: Product[] = [
     category: 'Árabe',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `11_Hombre_Paco_Rabanne_Black_XS_Clásico.webp`,
+    imageUrl: ``,
     description: 'Elegancia matutina con notas limpias y sofisticadas.',
     dna: ['Citrico', 'Amaderado', 'Floral']
   },
@@ -1367,7 +1367,7 @@ export const PRODUCTS: Product[] = [
     category: 'Árabe',
     gender: 'Dama',
     price: 45.00,
-    imageUrl: `26_Hombre_Jean_Paul_Gaultier_Scandal_Pour_Homme.webp`,
+    imageUrl: ``,
     description: 'Misterio nocturno para la mujer audaz.',
     dna: ['Oriental', 'Frutal', 'Amaderado']
   },
@@ -2127,7 +2127,7 @@ export const PRODUCTS: Product[] = [
     subcategory: '212',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `12_Hombre_Paco_Rabanne_Black_XS_Aerosol.webp`,
+    imageUrl: `212 men.webp`,
     description: 'Elegancia casual para el hombre moderno.',
     dna: ['Cuero', 'Dulce', 'Amaderado']
   },
@@ -2204,7 +2204,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `13_Hombre_Paco_Rabanne_Invictus_Clásico.webp`,
+    imageUrl: `temptation yanbal.webp`,
     description: 'El poder de la tentación irresistible.',
     dna: ['Amaderado', 'Especiada', 'Citrico']
   },
@@ -2314,7 +2314,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `14_Hombre_Paco_Rabanne_Invictus_Legend.webp`,
+    imageUrl: ``,
     description: 'Elegancia nocturna y sofisticada.',
     dna: ['Amaderado', 'Especiada', 'Cuero']
   },
@@ -2325,7 +2325,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `18_Hombre_Paco_Rabanne_1_Million_Clásico.webp`,
+    imageUrl: `arom yanbal.webp`,
     description: 'El sello del hombre tradicional.',
     dna: ['Amaderado', 'Citrico', 'Especiada']
   },
@@ -2336,7 +2336,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `15_Hombre_Paco_Rabanne_Invictus_Victory.webp`,
+    imageUrl: `adrenaline.webp`,
     description: 'Energía pura para vivir al límite.',
     dna: ['Citrico', 'Aromatica', 'Verde']
   },
@@ -2347,7 +2347,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `184_Hombre_Avon_Musk.webp`,
+    imageUrl: `qhm blue yanbal.webp`,
     description: 'Fuerza oceánica y frescura profunda.',
     dna: ['Acuatica', 'Amaderado', 'Citrico']
   },
@@ -2358,7 +2358,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `19_Hombre_Paco_Rabanne_1_Million_Lucky.webp`,
+    imageUrl: `qhm black yanbal.webp`,
     description: 'Distinción y carácter absoluto.',
     dna: ['Amaderado', 'Especiada', 'Oriental']
   },
@@ -2369,7 +2369,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `28_Hombre_Jean_Paul_Gaultier_Ultra_Male_Clásico.webp`,
+    imageUrl: ``,
     description: 'El clásico que nunca pasa de moda.',
     dna: ['Amaderado', 'Citrico', 'Cuero']
   },
@@ -2380,7 +2380,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `20_Hombre_Paco_Rabanne_1_Million_Privé.webp`,
+    imageUrl: `solo yanbal.webp`,
     description: 'Para el hombre único y auténtico.',
     dna: ['Amaderado', 'Especiada', 'Citrico']
   },
@@ -2540,7 +2540,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'XS',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `21_Hombre_Paco_Rabanne_1_Million_Elixir.webp`,
+    imageUrl: `10_Hombre_Paco_Rabanne_Black_XS_L’Excès.webp`,
     description: 'Intensidad excesiva y vibrante.',
     dna: ['Aromatica', 'Amaderado', 'Citrico']
   },
@@ -2552,7 +2552,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'XS',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `22_Hombre_Paco_Rabanne_1_Million_Gold.webp`,
+    imageUrl: `11_Hombre_Paco_Rabanne_Black_XS_Clásico.webp`,
     description: 'El original rebelde de la colección.',
     dna: ['Oriental', 'Amaderado', 'Especiada']
   },
@@ -2564,7 +2564,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'XS',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `23_Hombre_Paco_Rabanne_1_Million_Royal.webp`,
+    imageUrl: `12_Hombre_Paco_Rabanne_Black_XS_Aerosol.webp`,
     description: 'Frescura rebelde en formato spray.',
     dna: ['Aromatica', 'Citrico', 'Amaderado']
   },
@@ -2577,7 +2577,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Invictus',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `36_Hombre_Hugo_Boss_Boss_Clásico.webp`,
+    imageUrl: `13_Hombre_Paco_Rabanne_Invictus_Clásico.webp`,
     description: 'El trofeo del ganador. Toronja y laurel.',
     dna: ['Acuatica', 'Citrico', 'Aromatica']
   },
@@ -2589,7 +2589,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Invictus',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `71_Hombre_Montblanc_Legend_Spirit.webp`,
+    imageUrl: `14_Hombre_Paco_Rabanne_Invictus_Legend.webp`,
     description: 'Duelo ardiente entre especias y mar.',
     dna: ['Acuatica', 'Especiada', 'Amaderado']
   },
@@ -2601,7 +2601,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Invictus',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `11_Hombre_Paco_Rabanne_Invictus_Victory.webp`,
+    imageUrl: `15_Hombre_Paco_Rabanne_Invictus_Victory.webp`,
     description: 'Victoria extrema de vainilla y ámbar.',
     dna: ['Vainilla', 'Oriental', 'Dulce']
   },
@@ -2613,7 +2613,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Invictus',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `31_Hombre_Jean_Paul_Gaultier_Le_Male_Elixir_Absolu.webp`,
+    imageUrl: `16_Hombre_Paco_Rabanne_Invictus_Victory_Elixir_Absolu.webp`,
     description: 'El pináculo de la intensidad. Rico y poderoso.',
     dna: ['Vainilla', 'Oriental', 'Amaderado']
   },
@@ -2625,7 +2625,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Invictus',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `30_Hombre_Jean_Paul_Gaultier_Le_Male_Elixir.webp`,
+    imageUrl: `17_Hombre_Paco_Rabanne_Invictus_Elixir.webp`,
     description: 'Energía concentrada y magnetismo puro.',
     dna: ['Amaderado', 'Acuatica', 'Citrico']
   },
@@ -2638,7 +2638,7 @@ export const PRODUCTS: Product[] = [
     subcategory: '1 Million',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `54_Hombre_Armani_Acqua_di_Gio_Clásico.webp`,
+    imageUrl: `18_Hombre_Paco_Rabanne_1_Million_Clásico.webp`,
     description: 'El lingote de oro original. Canela y cuero.',
     dna: ['Especiada', 'Cuero', 'Dulce']
   },
@@ -2675,7 +2675,7 @@ export const PRODUCTS: Product[] = [
     gender: 'Hombre',
     price: 45.00,
     badge: 'TOP VENTAS',
-    imageUrl: `43_Hombre_Hugo_Boss_Boss_Elixir.webp`,
+    imageUrl: `21_Hombre_Paco_Rabanne_1_Million_Elixir.webp`,
     description: 'La máxima expresión de poder absoluto.',
     dna: ['Dulce', 'Frutal', 'Vainilla']
   },
@@ -2740,7 +2740,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Scandal',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `27_Hombre_Jean_Paul_Gaultier_Scandal_Le_Parfum.webp`,
+    imageUrl: `26_Hombre_Jean_Paul_Gaultier_Scandal_Pour_Homme.webp`,
     description: 'El rey del ring con caramelo y haba tonka.',
     dna: ['Dulce', 'Aromatica', 'Amaderado']
   },
@@ -2752,7 +2752,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Scandal',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `29_Hombre_Jean_Paul_Gaultier_Le_Male.webp`,
+    imageUrl: `27_Hombre_Jean_Paul_Gaultier_Scandal_Le_Parfum.webp`,
     description: 'Geranio y madera de sándalo adictiva.',
     dna: ['Amaderado', 'Aromatica', 'Dulce']
   },
@@ -2765,7 +2765,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Le Male',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `32_Hombre_Jean_Paul_Gaultier_Le_Beau.webp`,
+    imageUrl: `28_Hombre_Jean_Paul_Gaultier_Ultra_Male_Clásico.webp`,
     description: 'Pera y vainilla para el rompecorazones.',
     dna: ['Dulce', 'Frutal', 'Oriental']
   },
@@ -2777,7 +2777,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Le Male',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `33_Hombre_Jean_Paul_Gaultier_Le_Beau_Paradise_Garden.webp`,
+    imageUrl: `29_Hombre_Jean_Paul_Gaultier_Le_Male.webp`,
     description: 'El clásico marinero de lavanda y menta.',
     dna: ['Fougere', 'Aromatica', 'Vainilla']
   },
@@ -2789,7 +2789,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Le Male',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `34_Mujer_Jean_Paul_Gaultier_Divine.webp`,
+    imageUrl: `30_Hombre_Jean_Paul_Gaultier_Le_Male_Elixir.webp`,
     description: 'Fuego dorado de miel, tabaco y benjuí.',
     dna: ['Oriental', 'Dulce', 'Amaderado']
   },
@@ -2801,7 +2801,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Le Male',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `56_Hombre_Armani_Acqua_di_Gio_Elixir.webp`,
+    imageUrl: `31_Hombre_Jean_Paul_Gaultier_Le_Male_Elixir_Absolu.webp`,
     description: 'La quintaesencia de la seducción intensa.',
     dna: ['Oriental', 'Amaderado', 'Especiada']
   },
@@ -2863,7 +2863,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `37_Hombre_Hugo_Boss_Boss_Bottled.webp`,
+    imageUrl: `36_Hombre_Hugo_Boss_Boss_Clásico.webp`,
     description: 'El éxito embotellado. Manzana y canela.',
     dna: ['Amaderado', 'Frutal', 'Especiada']
   },
@@ -2875,7 +2875,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Bottled',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `38_Hombre_Hugo_Boss_Boss_Bottled_Parfum.webp`,
+    imageUrl: `37_Hombre_Hugo_Boss_Boss_Bottled.webp`,
     description: 'Elegancia contemporánea y versátil.',
     dna: ['Amaderado', 'Vainilla', 'Frutal']
   },
@@ -2887,7 +2887,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Bottled',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `39_Hombre_Hugo_Boss_Boss_Bottled_Intense.webp`,
+    imageUrl: `38_Hombre_Hugo_Boss_Boss_Bottled_Parfum.webp`,
     description: 'Intensidad oscura de cuero y maderas.',
     dna: ['Amaderado', 'Cuero', 'Citrico']
   },
@@ -2899,7 +2899,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Bottled',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `42_Hombre_Hugo_Boss_Boss_Intense.webp`,
+    imageUrl: `39_Hombre_Hugo_Boss_Boss_Bottled_Intense.webp`,
     description: 'Más especiado, más profundo, más Boss.',
     dna: ['Amaderado', 'Especiada', 'Vainilla']
   },
@@ -2932,7 +2932,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `44_Hombre_Hugo_Boss_Boss_Infinite.webp`,
+    imageUrl: `42_Hombre_Hugo_Boss_Boss_Intense.webp`,
     description: 'Carácter fuerte y seducción magnética.',
     dna: ['Oriental', 'Amaderado', 'Especiada']
   },
@@ -2944,7 +2944,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Bottled',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `45_Hombre_Hugo_Boss_Boss_Orange.webp`,
+    imageUrl: `43_Hombre_Hugo_Boss_Boss_Elixir.webp`,
     description: 'Incienso y cardamomo en alta concentración.',
     dna: ['Amaderado', 'Especiada', 'Oriental']
   },
@@ -2955,7 +2955,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `46_Hombre_Hugo_Boss_Boss_Red.webp`,
+    imageUrl: `44_Hombre_Hugo_Boss_Boss_Infinite.webp`,
     description: 'Equilibrio entre frescura y calidez.',
     dna: ['Aromatica', 'Amaderado', 'Frutal']
   },
@@ -2966,7 +2966,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `47_Hombre_Hugo_Boss_Boss_In_Motion.webp`,
+    imageUrl: `45_Hombre_Hugo_Boss_Boss_Orange.webp`,
     description: 'Espíritu libre con vainilla y manzana.',
     dna: ['Amaderado', 'Especiada', 'Vainilla']
   },
@@ -2977,7 +2977,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `48_Hombre_Hugo_Boss_Boss_The_Scent.webp`,
+    imageUrl: `46_Hombre_Hugo_Boss_Boss_Red.webp`,
     description: 'Notas metálicas y ruibarbo audaz.',
     dna: ['Oriental', 'Frutal', 'Aromatica']
   },
@@ -2988,7 +2988,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `49_Mujer_Hugo_Boss_Boss_The_Scent.webp`,
+    imageUrl: `47_Hombre_Hugo_Boss_Boss_In_Motion.webp`,
     description: 'Adrenalina en una esfera de energía.',
     dna: ['Oriental', 'Fougere', 'Citrico']
   },
@@ -3000,7 +3000,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'The Scent',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `50_Hombre_Armani_Code.webp`,
+    imageUrl: `48_Hombre_Hugo_Boss_Boss_The_Scent.webp`,
     description: 'Seducción lenta con fruto de Maninka.',
     dna: ['Aromatica', 'Especiada', 'Cuero']
   },
@@ -3029,7 +3029,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `51_Hombre_Armani_Stronger_With_You_Intensely.webp`,
+    imageUrl: `50_Hombre_Armani_Code.webp`,
     description: 'El código de la seducción elegante.',
     dna: ['Oriental', 'Especiada', 'Cuero']
   },
@@ -3041,7 +3041,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Stronger With You',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `52_Hombre_Armani_Stronger_With_You.webp`,
+    imageUrl: `51_Hombre_Armani_Stronger_With_You_Intensely.webp`,
     description: 'Toffee y canela para un amor intenso.',
     dna: ['Dulce', 'Oriental', 'Fougere']
   },
@@ -3053,7 +3053,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Stronger With You',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `53_Hombre_Armani_Stronger_With_You_Absolutely.webp`,
+    imageUrl: `52_Hombre_Armani_Stronger_With_You.webp`,
     description: 'Castaña y vainilla, joven y moderno.',
     dna: ['Aromatica', 'Dulce', 'Especiada']
   },
@@ -3065,7 +3065,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Stronger With You',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `55_Hombre_Armani_Acqua_di_Gio_Profondo.webp`,
+    imageUrl: `53_Hombre_Armani_Stronger_With_You_Absolutely.webp`,
     description: 'Acorde de ron y vainilla adictiva.',
     dna: ['Oriental', 'Dulce', 'Amaderado']
   },
@@ -3077,7 +3077,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Acqua di Gio',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `57_Mujer_Armani_Acqua_di_Gioia_Intense.webp`,
+    imageUrl: `54_Hombre_Armani_Acqua_di_Gio_Clásico.webp`,
     description: 'La frescura mítica del mar Mediterráneo.',
     dna: ['Acuatica', 'Citrico', 'Aromatica']
   },
@@ -3102,7 +3102,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Acqua di Gio',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `63_Hombre_Dior_Sauvage_Elixir.webp`,
+    imageUrl: `56_Hombre_Armani_Acqua_di_Gio_Elixir.webp`,
     description: 'Frescura incandescente y maderas ricas.',
     dna: ['Acuatica', 'Amaderado', 'Especiada']
   },
@@ -3113,7 +3113,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Dama',
     price: 45.00,
-    imageUrl: `91_Hombre_Valentino_Uomo_Born_in_Roma_Intense.webp`,
+    imageUrl: `57_Mujer_Armani_Acqua_di_Gioia_Intense.webp`,
     description: 'Alegría intensa de cítricos y jazmín.',
     dna: ['Floral', 'Frutal', 'Acuatica']
   },
@@ -3220,7 +3220,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Eros',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `67_Hombre_Versace_Eros_Flame.webp`,
+    imageUrl: `66_Hombre_Versace_Eros_Azul.webp`,
     description: 'Menta, manzana y vainilla para el dios del amor.',
     dna: ['Aromatica', 'Vainilla', 'Verde']
   },
@@ -3233,7 +3233,7 @@ export const PRODUCTS: Product[] = [
     gender: 'Hombre',
     price: 45.00,
     badge: 'TOP VENTAS',
-    imageUrl: `68_Hombre_Versace_Energy.webp`,
+    imageUrl: `67_Hombre_Versace_Eros_Flame.webp`,
     description: 'Pasión ardiente con cítricos y pimienta.',
     dna: ['Especiada', 'Citrico', 'Amaderado']
   },
@@ -3245,7 +3245,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Eros',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `69_Hombre_Versace_Pour_Homme.webp`,
+    imageUrl: `68_Hombre_Versace_Energy.webp`,
     description: 'Explosión de cítricos vibrantes y energía pura.',
     dna: ['Citrico', 'Aromatica', 'Amaderado']
   },
@@ -3256,7 +3256,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `89_Hombre_Bvlgari_Aqva_Pour_Homme_Marine.webp`,
+    imageUrl: `69_Hombre_Versace_Pour_Homme.webp`,
     description: 'El aroma del hombre mediterráneo clásico.',
     dna: ['Citrico', 'Aromatica', 'Fougere']
   },
@@ -3267,7 +3267,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Dama',
     price: 45.00,
-    imageUrl: `87_Mujer_Bvlgari_Omnia_Crystalline.webp`,
+    imageUrl: `70_Mujer_Versace_Bright_Crystal.webp`,
     description: 'Transparencia de cristal y flores frescas.',
     dna: ['Floral', 'Frutal', 'Acuatica']
   },
@@ -3281,7 +3281,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Legend',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `72_Hombre_Montblanc_Explorer_Extreme.webp`,
+    imageUrl: `71_Hombre_Montblanc_Legend_Spirit.webp`,
     description: 'Frescura blanca, elegante y atemporal.',
     dna: ['Citrico', 'Aromatica', 'Amaderado']
   },
@@ -3293,7 +3293,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Explorer',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `73_Hombre_Montblanc_Explorer.webp`,
+    imageUrl: `72_Hombre_Montblanc_Explorer_Extreme.webp`,
     description: 'Aventura extrema hacia nuevos horizontes.',
     dna: ['Amaderado', 'Cuero', 'Aromatica']
   },
@@ -3305,7 +3305,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Explorer',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `74_Hombre_Montblanc_Explorer_Platinum.webp`,
+    imageUrl: `73_Hombre_Montblanc_Explorer.webp`,
     description: 'Bergamota y vetiver para el explorador moderno.',
     dna: ['Amaderado', 'Aromatica', 'Citrico']
   },
@@ -3317,7 +3317,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Explorer',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `75_Hombre_Montblanc_Starwalker.webp`,
+    imageUrl: `74_Hombre_Montblanc_Explorer_Platinum.webp`,
     description: 'Alturas nevadas con hojas de violeta.',
     dna: ['Amaderado', 'Aromatica', 'Verde']
   },
@@ -3328,7 +3328,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `23_Hombre_Montblanc_Starwalker.webp`,
+    imageUrl: `75_Hombre_Montblanc_Starwalker.webp`,
     description: 'Caminar entre las estrellas. Bambú y almizcle.',
     dna: ['Amaderado', 'Especiada', 'Citrico']
   },
@@ -3470,7 +3470,7 @@ export const PRODUCTS: Product[] = [
     subcategory: 'Omnia',
     gender: 'Dama',
     price: 45.00,
-    imageUrl: `88_Mujer_Bvlgari_Omnia_Rose_Goldea.webp`,
+    imageUrl: `87_Mujer_Bvlgari_Omnia_Crystalline.webp`,
     description: 'Pureza de cristal y flor de loto.',
     dna: ['Floral', 'Acuatica', 'Amaderado']
   },
@@ -3481,7 +3481,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Dama',
     price: 45.00,
-    imageUrl: `yara rose.webp`,
+    imageUrl: `88_Mujer_Bvlgari_Omnia_Rose_Goldea.webp`,
     description: 'Homenaje a la feminidad y la rosa.',
     dna: ['Floral', 'Dulce', 'Amaderado']
   },
@@ -3517,7 +3517,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diseñador',
     gender: 'Hombre',
     price: 45.00,
-    imageUrl: `93_Mujer_Valentino_Donna_Born_in_Roma.webp`,
+    imageUrl: `91_Hombre_Valentino_Uomo_Born_in_Roma_Intense.webp`,
     description: 'Seducción nocturna y profunda.',
     dna: ['Oriental', 'Vainilla', 'Amaderado']
   },

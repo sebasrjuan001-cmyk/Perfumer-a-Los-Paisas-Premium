@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Info, Zap, Clock, Shield, Star, ShieldCheck, Share2, ChevronLeft, ArrowLeft } from 'lucide-react';
+import { MessageCircle, X, Info, Zap, Clock, Shield, Star, ShieldCheck, Share2, ArrowLeft } from 'lucide-react';
 import { Product } from '../types';
 import { getNoteConfig } from '../constants';
 
@@ -21,31 +21,50 @@ const hashStr = (s: string): number => {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, index, onModalStateChange }) => {
   const [isDetailOpen, setIsDetailOpen] = useState(false);
+  const scrollPositionRef = useRef(0);
+  const hasImage = Boolean(product.imageUrl?.trim());
 
-  // Sync modal state with parent (hides LeadMagnet and WhatsAppFAB)
   useEffect(() => {
-    // CRITICAL FIX: Only the active card should modify global state and body styles!
     if (!isDetailOpen) return;
 
     if (onModalStateChange) onModalStateChange(true);
-    
-    // iOS-safe scroll lock: use position:fixed so rubber-band scroll doesn't bleed through
-    const scrollY = window.scrollY;
+
+    const scrollY = scrollPositionRef.current || window.scrollY;
+    const previousBodyStyles = {
+      position: document.body.style.position,
+      top: document.body.style.top,
+      left: document.body.style.left,
+      right: document.body.style.right,
+      width: document.body.style.width,
+      overflowY: document.body.style.overflowY,
+    };
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
     document.body.style.position = 'fixed';
     document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
     document.body.style.width = '100%';
-    document.body.style.overflowY = 'scroll'; // keep scrollbar space on desktop
+    document.body.style.overflowY = 'scroll';
+    document.documentElement.style.overflow = 'hidden';
 
     return () => {
-      // Cleanup runs ONLY when THIS card closes
       if (onModalStateChange) onModalStateChange(false);
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      document.body.style.overflowY = '';
-      if (scrollY) window.scrollTo(0, scrollY);
+      document.body.style.position = previousBodyStyles.position;
+      document.body.style.top = previousBodyStyles.top;
+      document.body.style.left = previousBodyStyles.left;
+      document.body.style.right = previousBodyStyles.right;
+      document.body.style.width = previousBodyStyles.width;
+      document.body.style.overflowY = previousBodyStyles.overflowY;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      window.requestAnimationFrame(() => window.scrollTo({ top: scrollY, left: 0, behavior: 'auto' }));
     };
   }, [isDetailOpen, onModalStateChange]);
+
+  const openModal = useCallback(() => {
+    scrollPositionRef.current = window.scrollY;
+    setIsDetailOpen(true);
+  }, []);
 
   const closeModal = useCallback(() => setIsDetailOpen(false), []);
 
@@ -165,33 +184,33 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index, onModalStateC
         viewport={{ once: true, margin: "-50px" }}
         whileHover={{ y: -8, scale: 1.012 }}
         transition={{ delay: (index % 12) * 0.04, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-        onClick={() => setIsDetailOpen(true)}
-        className="group relative w-full bg-[#121212] rounded-[2rem] border border-white/5 overflow-hidden flex flex-col hover:border-[#BF953F]/40 hover:shadow-[0_25px_50px_rgba(0,0,0,0.9)] transition-all duration-500 shadow-2xl shadow-black/50 cursor-pointer"
+        onClick={openModal}
+        className="group relative w-full bg-[#121212] rounded-2xl md:rounded-[2rem] border border-white/5 overflow-hidden flex flex-col hover:border-[#BF953F]/40 hover:shadow-[0_25px_50px_rgba(0,0,0,0.9)] transition-all duration-500 shadow-2xl shadow-black/50 cursor-pointer"
       >
         {/* Badges */}
-        <div className="absolute top-4 left-4 right-4 z-20 flex justify-between items-start pointer-events-none">
-          <div className="px-3 py-1 rounded-full border border-[#BF953F]/30 bg-black/60 backdrop-blur-md">
-            <span className="text-[#BF953F] font-serif text-[10px] tracking-widest uppercase font-bold">{product.brand}</span>
+        <div className="absolute top-2 left-2 right-2 md:top-4 md:left-4 md:right-4 z-20 flex justify-between items-start gap-1 pointer-events-none">
+          <div className="min-w-0 max-w-[72%] px-2 md:px-3 py-1 rounded-full border border-[#BF953F]/30 bg-black/60 backdrop-blur-md">
+            <span className="block truncate text-[#BF953F] font-serif text-[8px] md:text-[10px] tracking-wider md:tracking-widest uppercase font-bold">{product.brand}</span>
           </div>
           {product.badge && (
-            <div className="px-3 py-1 rounded-full bg-[#BF953F] shadow-[0_0_15px_rgba(191,149,63,0.5)]">
-              <span className="text-black font-extrabold text-[9px] tracking-widest uppercase">{product.badge}</span>
+            <div className="max-w-[45%] px-2 md:px-3 py-1 rounded-full bg-[#BF953F] shadow-[0_0_15px_rgba(191,149,63,0.5)]">
+              <span className="block truncate text-black font-extrabold text-[7px] md:text-[9px] tracking-wider md:tracking-widest uppercase">{product.badge}</span>
             </div>
           )}
         </div>
 
         {/* Image */}
-        <div className="relative aspect-[4/5] sm:h-72 w-full bg-gradient-to-b from-[#1a1a1a] to-[#121212] flex items-center justify-center overflow-hidden">
+        <div className="relative aspect-square md:aspect-[4/5] md:h-72 w-full bg-gradient-to-b from-[#1a1a1a] to-[#121212] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-black/10 z-10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
-          {product.imageUrl ? (
+          {hasImage ? (
             <img
               src={`/images/perfumes/${product.imageUrl}`}
               alt={product.name}
               loading="lazy"
-              className="h-full w-full object-contain p-6 z-0 group-hover:scale-110 transition-transform duration-700 ease-out drop-shadow-[0_15px_15px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_25px_rgba(191,149,63,0.2)]"
+              className="h-full w-full object-contain p-3 md:p-6 z-0 group-hover:scale-110 transition-transform duration-700 ease-out drop-shadow-[0_15px_15px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_20px_25px_rgba(191,149,63,0.2)]"
             />
           ) : (
-            <div className="w-full h-full border border-dashed border-white/10 rounded-2xl m-6 flex items-center justify-center">
+            <div className="w-full h-full border border-dashed border-white/10 rounded-2xl m-3 md:m-6 flex items-center justify-center text-center px-2">
               <span className="text-[10px] tracking-widest text-white/20 uppercase">Imagen en preparación</span>
             </div>
           )}
@@ -204,11 +223,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index, onModalStateC
         </div>
 
         {/* Card Footer */}
-        <div className="p-4 md:p-5 bg-gradient-to-t from-black/80 to-[#121212] border-t border-white/5">
-          <h2 className="text-lg md:text-xl font-serif text-white group-hover:text-[#BF953F] transition-colors leading-tight line-clamp-1 mb-0.5">
+        <div className="p-3 md:p-5 bg-gradient-to-t from-black/80 to-[#121212] border-t border-white/5">
+          <h2 className="text-sm md:text-xl font-serif text-white group-hover:text-[#BF953F] transition-colors leading-tight line-clamp-1 mb-0.5">
             {product.name}
           </h2>
-          <span className="text-[8px] text-[#BF953F] uppercase tracking-[0.2em] font-bold">{product.category}</span>
+          <span className="block truncate text-[7px] md:text-[8px] text-[#BF953F] uppercase tracking-[0.16em] md:tracking-[0.2em] font-bold">{product.category}</span>
         </div>
       </motion.div>
 
@@ -263,20 +282,26 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index, onModalStateC
                 </button>
               </div>
 
-              {/* Bottle Image — fixed height, never clipped */}
-              <div className="shrink-0 h-[40vh] bg-gradient-to-b from-[#141414] to-[#0a0a0a] flex items-center justify-center px-12 py-4">
-                <motion.img
-                  initial={{ scale: 0.85, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
-                  src={`/images/perfumes/${product.imageUrl}`}
-                  alt={product.name}
-                  className="h-full w-full object-contain drop-shadow-[0_20px_40px_rgba(191,149,63,0.25)] filter brightness-110"
-                />
-              </div>
-
               {/* Scrollable Info Panel */}
-              <div className="flex-1 overflow-y-auto px-5 py-5 space-y-6 pb-32">
+              <div className="flex-1 min-h-0 overflow-y-auto px-4 py-4 space-y-5 pb-36">
+                {/* Bottle Image */}
+                <div className="h-[58svh] min-h-[390px] max-h-[580px] bg-gradient-to-b from-[#141414] to-[#0a0a0a] flex items-center justify-center px-4 pt-16 pb-12 rounded-2xl border border-white/5 overflow-hidden">
+                  {hasImage ? (
+                    <motion.img
+                      initial={{ scale: 0.85, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
+                      src={`/images/perfumes/${product.imageUrl}`}
+                      alt={product.name}
+                      className="max-h-[76%] max-w-[90%] object-contain translate-y-6 drop-shadow-[0_20px_40px_rgba(191,149,63,0.25)] filter brightness-110"
+                    />
+                  ) : (
+                    <div className="w-full h-full border border-dashed border-white/10 rounded-2xl flex items-center justify-center">
+                      <span className="text-[10px] tracking-widest text-white/25 uppercase">Imagen en preparación</span>
+                    </div>
+                  )}
+                </div>
+
                 {/* Header */}
                 <div>
                   <div className="flex items-center gap-1.5 mb-2">
@@ -299,7 +324,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index, onModalStateC
                     <span className="text-[10px] text-white font-bold tracking-widest uppercase">Desempeño Profesional 2026</span>
                   </div>
                   <ScoreBar label="Versatilidad & Firma Personal" score={performance.versatility} icon={Shield} />
-                  <ScoreBar label="Oficina & Événements Business" score={performance.professional} icon={Zap} />
+                  <ScoreBar label="Oficina & Eventos Business" score={performance.professional} icon={Zap} />
                   <ScoreBar label="Nocturno & Seducción" score={performance.nocturnal} icon={Star} />
                   <ScoreBar label="Longevidad & Proyección" score={performance.longevity} icon={Clock} />
                 </div>
@@ -325,7 +350,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index, onModalStateC
               </div>
 
               {/* Fixed bottom CTA — separate from scrollable content */}
-              <div className="fixed bottom-0 left-0 right-0 z-[220] bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-white/10 px-5 py-4 flex gap-3">
+              <div className="fixed bottom-0 left-0 right-0 z-[220] bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-white/10 px-5 py-4 pb-[calc(1rem+env(safe-area-inset-bottom))] flex gap-3">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
                   <button className="w-full bg-gradient-to-r from-[#BF953F] to-[#FCF6BA] text-black py-4 rounded-2xl font-bold uppercase tracking-[0.2em] text-[11px] flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-[0_0_30px_rgba(191,149,63,0.3)]">
                     <MessageCircle size={18} />
@@ -350,17 +375,23 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index, onModalStateC
               transition={{ type: 'spring', damping: 30, stiffness: 300 }}
               className="fixed inset-0 z-[210] hidden md:flex items-center justify-center p-8 pointer-events-none"
             >
-              <div className="w-full max-w-4xl max-h-[88vh] bg-[#0a0a0a] border border-[#BF953F]/20 rounded-[2.5rem] overflow-hidden shadow-[0_0_120px_rgba(0,0,0,1)] flex pointer-events-auto">
+              <div className="w-full max-w-5xl h-[min(88vh,760px)] bg-[#0a0a0a] border border-[#BF953F]/20 rounded-[2.5rem] overflow-hidden shadow-[0_0_120px_rgba(0,0,0,1)] flex pointer-events-auto">
                 {/* Left: Image */}
-                <div className="w-5/12 shrink-0 bg-gradient-to-br from-[#141414] to-black p-12 flex items-center justify-center border-r border-white/5 relative">
-                  <motion.img
-                    initial={{ scale: 0.85, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.15, type: 'spring', stiffness: 120 }}
-                    src={`/images/perfumes/${product.imageUrl}`}
-                    alt={product.name}
-                    className="h-full w-full object-contain drop-shadow-[0_25px_40px_rgba(191,149,63,0.3)]"
-                  />
+                <div className="w-5/12 shrink-0 bg-gradient-to-br from-[#141414] to-black px-10 pt-24 pb-16 lg:px-14 lg:pt-28 lg:pb-16 flex items-center justify-center border-r border-white/5 relative overflow-hidden">
+                  {hasImage ? (
+                    <motion.img
+                      initial={{ scale: 0.85, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ delay: 0.15, type: 'spring', stiffness: 120 }}
+                      src={`/images/perfumes/${product.imageUrl}`}
+                      alt={product.name}
+                      className="max-h-[76%] max-w-[88%] object-contain translate-y-6 drop-shadow-[0_25px_40px_rgba(191,149,63,0.3)]"
+                    />
+                  ) : (
+                    <div className="w-full h-full border border-dashed border-white/10 rounded-2xl flex items-center justify-center">
+                      <span className="text-[10px] tracking-widest text-white/25 uppercase">Imagen en preparación</span>
+                    </div>
+                  )}
                   {/* Close & Share */}
                   <div className="absolute top-5 right-5 flex gap-2">
                     <button
@@ -379,7 +410,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index, onModalStateC
                 </div>
 
                 {/* Right: Info — scrollable */}
-                <div className="flex-1 overflow-y-auto p-10 flex flex-col gap-7">
+                <div className="flex-1 min-h-0 overflow-y-auto p-8 lg:p-10 flex flex-col gap-7">
                   <div>
                     <div className="flex items-center gap-1.5 mb-1">
                       <ShieldCheck size={13} className="text-emerald-500" />

@@ -59,14 +59,14 @@ function App() {
         <Hero />
         
         {/* ADDED ID HERE for Navbar Scroll */}
-        <div id="catalog-section" className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-24 min-h-screen">
+        <div id="catalog-section" className="relative z-10 max-w-7xl mx-auto px-3 md:px-8 py-16 md:py-24 min-h-screen">
            {/* Section Header */}
            <motion.div 
              initial={{ opacity: 0, y: 30 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
              transition={{ duration: 0.8 }}
-             className="flex items-end justify-between mb-16 border-b border-white/5 pb-4"
+             className="flex items-end justify-between mb-8 md:mb-16 border-b border-white/5 pb-4"
            >
               <div>
                 <h2 className="text-3xl font-serif text-white mb-2">
@@ -84,11 +84,11 @@ function App() {
            </motion.div>
 
            {/* Grid - Enhanced for mobile impact */}
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-8">
               {isChangingCategory ? (
                 // Skeleton Loader
                 Array.from({ length: 8 }).map((_, i) => (
-                  <div key={i} className="w-full h-[400px] bg-[#121212] rounded-2xl animate-pulse border border-white/5 flex flex-col p-6">
+                  <div key={i} className="w-full h-[220px] md:h-[400px] bg-[#121212] rounded-2xl animate-pulse border border-white/5 flex flex-col p-3 md:p-6">
                     <div className="w-full h-1/2 bg-white/5 rounded-xl mb-4"></div>
                     <div className="h-4 bg-white/5 rounded w-3/4 mb-2"></div>
                     <div className="h-3 bg-white/5 rounded w-1/2 mb-4"></div>
