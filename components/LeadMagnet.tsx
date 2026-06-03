@@ -88,7 +88,7 @@ const LeadMagnet: React.FC<LeadMagnetProps> = ({ isHidden }) => {
                  </p>
 
                  <a 
-                    href="https://wa.me/593988755347?text=Hola,%20quisiera%20negociar%20un%20pedido%20de%20perfumes%20al%20por%20mayor.%20Vi%20sus%20precios%20en%20la%20web."
+                    href="https://wa.me/593985631032?text=Hola,%20quisiera%20negociar%20un%20pedido%20de%20perfumes%20al%20por%20mayor.%20Vi%20sus%20precios%20en%20la%20web."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-gradient-to-r from-[#BF953F] to-[#FCF6BA] text-black py-5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all shadow-[0_10px_30px_rgba(191,149,63,0.2)] hover:shadow-[0_15px_30px_rgba(191,149,63,0.4)] flex items-center justify-center gap-3 active:scale-[0.98]"

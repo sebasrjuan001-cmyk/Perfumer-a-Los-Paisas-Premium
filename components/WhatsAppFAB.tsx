@@ -10,7 +10,7 @@ const WhatsAppFAB: React.FC<WhatsAppFABProps> = ({ isHidden }) => {
   // Immediately remove from DOM when a product modal is open — no animation, no z-index battle
   if (isHidden) return null;
 
-  const phoneNumber = "593988755347";
+  const phoneNumber = "593985631032";
   const message = encodeURIComponent("Hola equipo de Los Paisas. Visité su página web y me interesa recibir asesoría sobre sus políticas de distribución y catálogo completo.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 

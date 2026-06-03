@@ -99,7 +99,15 @@ const Footer: React.FC = () => {
 
              <div className="flex items-center gap-3">
                <Phone className="w-5 h-5 text-[#BF953F] shrink-0" />
-               <span className="text-white/80 text-sm">+593 98 875 5347</span>
+               <a href="https://wa.me/593985631032" target="_blank" rel="noopener noreferrer" className="text-white/80 text-sm hover:text-[#BF953F] transition-colors">098 563 1032</a>
+             </div>
+
+             <div className="flex items-center gap-3">
+               <MapPin className="w-5 h-5 text-[#BF953F] shrink-0" />
+               <div className="flex flex-col">
+                 <span className="text-white/80 text-sm">Sede Terminal</span>
+                 <span className="text-white/40 text-xs">098 538 0774</span>
+               </div>
              </div>
 
              <div className="flex items-center gap-3">

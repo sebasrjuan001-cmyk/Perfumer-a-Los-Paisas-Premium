@@ -69,7 +69,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index, onModalStateC
   const closeModal = useCallback(() => setIsDetailOpen(false), []);
 
   // WhatsApp
-  const phoneNumber = "593988755347";
+  const phoneNumber = "593985631032";
   const message = encodeURIComponent(`Hola, deseo cotizar al por mayor el perfume: *${product.name}* de *${product.brand}*. Mi nombre es...`);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
