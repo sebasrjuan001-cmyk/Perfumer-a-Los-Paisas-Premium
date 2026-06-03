@@ -113,7 +113,7 @@ function App() {
                   </p>
                   <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                     <a 
-                      href={`https://wa.me/593988755347?text=${encodeURIComponent(`Hola, busqué "${filters.search}" en su web y no lo encontré. ¿Podrían ayudarme a conseguirlo?`)}`}
+                      href={`https://wa.me/593985631032?text=${encodeURIComponent(`Hola, busqué "${filters.search}" en su web y no lo encontré. ¿Podrían ayudarme a conseguirlo?`)}`}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-[#BF953F] text-black px-6 py-3 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[#D4A373] transition-colors"
